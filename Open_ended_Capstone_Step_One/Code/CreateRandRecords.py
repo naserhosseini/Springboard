@@ -30,6 +30,7 @@ while StartDate < datetime.now():
     PurchaseCSV = '../Purchase{}.csv'.format(name)
     with open(PurchaseCSV, 'a', newline='') as Purchase:
         purchase = csv.writer(Purchase)
+        
         purchase.writerow(['Date', 'MIX', 'Milk', 'Egg', 'Oil', 'Fondant', 'Sugar', 'Butter', 'Flavour', 'Flour'])
         with open(ConsumeCSV, 'a', newline='') as Consume:
             consume = csv.writer(Consume)
